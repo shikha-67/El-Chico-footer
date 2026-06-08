@@ -1,0 +1,149 @@
+*{
+    padding: 0;
+    margin:0;
+    
+}
+footer{
+     font-family: Arial, sans-serif;
+    font-size: 2.5vw;
+    background-color: #252626;
+    color: white;
+    height: 100vh;
+}
+#footer_section{
+    display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+}
+#shortcut{
+    grid-column-start: 2;
+}
+
+.common_container{
+    margin: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The red active line */
+.heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px; /* Width of the red line */
+  height: 3px; /* Thickness of the line */
+  background-color: #ff4500; /* Red/Orange color */
+  z-index: 2;
+}
+
+/* Optional: The dark grey full-width line underneath */
+.heading::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Full width line */
+  height: 1px; /* Very thin line */
+  background-color: #444444; /* Dark grey color */
+  z-index: 1;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+   gap: 0.8vw;
+   line-height: 2;
+}
+#About{
+    grid-column-start: 1;
+}
+#shortcut{
+    grid-column-start: 2;
+}
+#contact_container{
+    grid-column-start: 3;
+}
+.heading{
+    position: relative;
+  padding-bottom: 3vh;
+    
+}
+.paragraph{
+    line-height: 2;
+}
+.common{
+    margin-top: 2vh;
+}
+.social_container{
+   margin-top: 1vh;
+font-size: 3vw;
+}
+.contact{
+    color: white;
+    text-decoration: none;
+    line-height: 2;
+}
+.social_link{
+ margin-right: 2vw;
+ height: 2vh;
+}
+.social_container a{
+    margin-right:1vw;
+}
+.text{
+    margin-top: 1vh;
+}
+.social_icon{
+   
+}
+@media (min-width:700px){
+    footer{
+        font-size: 2.5vmin;
+    }
+    .social_container{
+   margin-top: 2vh;
+font-size: 4vmin;
+}
+.contact{
+    margin: 1.3vmin 0px;
+}
+.social_link{
+ margin-right: 2vmin;
+}
+.text{
+    margin-top: 3vh;
+}
+  /* #footer_section {
+    grid-template-columns: 1fr !important; /* Stacks the 3 sections vertically */
+    /* gap: 2.5rem;                           /* Adds space between the stacked sections */
+    /* padding: 3rem 1.5rem;                  /* Gives breathing room on the sides, top, and bottom */
+  /* }
+
+  .common_container {
+    width: 100%;                           /* Allows text to use the full screen width */
+    margin: 0 0 1.5rem 0;                  Replaces the unpredictable vh/vw units on mobile
+  /* }  */ */
+
+}
+/* --- Updated Responsive Code --- */
+@media screen and (max-width: 768px) {
+  
+  /* Target the footer section with extra class specificity if needed */
+  footer #footer_section, 
+  #footer_section.grid,
+  #footer_section {
+    display: flex !important;
+    flex-direction: column !important; /* Force vertical stacking */
+    gap: 2.5rem !important; 
+    padding: 3rem 1.5rem !important;
+  }
+
+  /* Ensure the child containers stretch to take full width */
+  #footer_section .common_container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 1.5rem 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
