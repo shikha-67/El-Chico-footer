@@ -13,6 +13,7 @@ footer{
 #footer_section{
     display: grid;
      grid-template-columns: 1fr 1fr 1fr;
+     margin:0px 3vw;
 }
 .common_container{
     margin: 2vh 2vw;
@@ -57,7 +58,7 @@ footer{
 }
 
 .social_container a{
-    margin-right:1vw;
+    margin-right:0.3vw;
     
 }
 .social_icon{
